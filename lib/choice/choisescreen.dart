@@ -13,7 +13,7 @@ class ChoiceScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.lightBlue,
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: screenHeight*0.08,
         centerTitle: true,
         title: Text(
           "DeliveryApp",
