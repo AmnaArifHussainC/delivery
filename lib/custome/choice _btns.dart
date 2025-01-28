@@ -11,13 +11,16 @@ class ChoiceButtons extends StatelessWidget {
   });
 
   @override
+
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {},
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12),
+          padding:  EdgeInsets.symmetric(vertical: screenWidth*0.03),
           child: Text(
               text,
             style: const TextStyle(
