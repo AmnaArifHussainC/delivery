@@ -26,7 +26,7 @@ class ChoiceScreen extends StatelessWidget {
         backgroundColor: AppColors.secondaryBlue,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: screenWidth*0.05),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
