@@ -1,3 +1,4 @@
+import 'package:deliveryapp/auth/login.dart';
 import 'package:deliveryapp/consts/const_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_walkthrough_screen/flutter_walkthrough_screen.dart';
@@ -7,20 +8,19 @@ class OnboardingScreen extends StatelessWidget {
 
   final List<OnbordingData> list = [
     OnbordingData(
-      image: AssetImage("images/pic1.png"),
+      image: AssetImage("assets/images/water2.png"),
       titleText: Text(
         "Welcome to DeliveryApp",
         style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: AppColors.secondaryBlue,
-          shadows: [
-            Shadow(
-              color: AppColors.creamWhite,
-              blurRadius: 20,
-            )
-          ]
-        ),
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: AppColors.secondaryBlue,
+            shadows: [
+              Shadow(
+                color: AppColors.creamWhite,
+                blurRadius: 20,
+              )
+            ]),
       ),
       descText: Text(
         "Experience the easiest way to get water delivered to your doorstep. Stay hydrated without the hassle!",
@@ -32,20 +32,19 @@ class OnboardingScreen extends StatelessWidget {
       ),
     ),
     OnbordingData(
-      image: AssetImage("images/pic2.png"),
+      image: AssetImage("assets/images/water3.png"),
       titleText: Text(
         "Fast & Reliable Delivery",
         style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: AppColors.secondaryBlue,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: AppColors.secondaryBlue,
             shadows: [
               Shadow(
                 color: AppColors.creamWhite,
-                blurRadius: 20,
+                blurRadius: 25,
               )
-            ]
-        ),
+            ]),
       ),
       descText: Text(
         "Our trusted delivery team ensures your water reaches you fresh and on time, every time.",
@@ -57,20 +56,19 @@ class OnboardingScreen extends StatelessWidget {
       ),
     ),
     OnbordingData(
-      image: AssetImage("images/pic3.png"),
+      image: AssetImage("assets/images/water3.png"),
       titleText: Text(
         "Track Your Orders",
         style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: AppColors.secondaryBlue,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: AppColors.secondaryBlue,
             shadows: [
               Shadow(
                 color: AppColors.creamWhite,
                 blurRadius: 20,
               )
-            ]
-        ),
+            ]),
       ),
       descText: Text(
         "Stay updated with real-time order tracking and enjoy peace of mind knowing exactly when your water will arrive.",
@@ -103,18 +101,30 @@ class OnboardingScreen extends StatelessWidget {
           fontWeight: FontWeight.w700,
         ),
       ),
-      lastButton: Text(
-        "GOT IT",
-        style: TextStyle(
-          color: AppColors.secondaryBlue,
-          fontWeight: FontWeight.w700,
+      lastButton: GestureDetector(
+        onTap: () {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => LoginScreen()));
+        },
+        child: Text(
+          "GOT IT",
+          style: TextStyle(
+            color: AppColors.secondaryBlue,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
-      skipButton: Text(
-        "SKIP",
-        style: TextStyle(
-          color: AppColors.secondaryBlue,
-          fontWeight: FontWeight.w700,
+      skipButton: GestureDetector(
+        onTap: () {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => LoginScreen()));
+        },
+        child: Text(
+          "SKIP",
+          style: TextStyle(
+            color: AppColors.secondaryBlue,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
       selectedDotColor: AppColors.secondaryBlue,

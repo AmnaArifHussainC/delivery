@@ -1,5 +1,4 @@
-import 'package:deliveryapp/screens/onboarding/onboarding_Screen.dart';
-import 'package:deliveryapp/screens/splashScreen/splah.dart';
+import 'package:deliveryapp/auth/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home: LoginScreen(),
     );
   }
 }
