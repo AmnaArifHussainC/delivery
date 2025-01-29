@@ -15,7 +15,7 @@ class ChoiceScreen extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: screenHeight*0.08,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "DeliveryApp",
           style: TextStyle(
             color: Colors.white,
@@ -31,7 +31,7 @@ class ChoiceScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Enter as:",
                 style: TextStyle(
                     color: AppColors.secondaryBlue,
@@ -39,11 +39,11 @@ class ChoiceScreen extends StatelessWidget {
                     fontSize: 25),
               ),
               SizedBox(
-                height: 50,
+                height: screenHeight*0.09,
               ),
-              ChoiceButtons(text: "Seller",),
-              SizedBox(height: 10,),
-              ChoiceButtons(text: "User",),
+              const ChoiceButtons(text: "Seller",),
+              SizedBox(height: screenHeight*0.02,),
+              const ChoiceButtons(text: "User",),
             ],
           ),
         ),
